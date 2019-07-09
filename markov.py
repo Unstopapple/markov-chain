@@ -51,8 +51,7 @@ class MarkovChain:
 				for i, word in enumerate(line):  # these for loops are what will make this program lag when I have thousands of lines of example text.
 					if word == previous_word:  # tbh, I couldn't care less. This is my first project. It wont be marketed. whatever.
 						if (i + 1) < len(line):  # also, someone's probably done it better than I have. If not, wtf is wrong with everyone.
-							potential_words.append(
-								line[i + 1])  # learn from my mistakes. if line[i+1] is replaced with word, then it will just be shit.
+							potential_words.append(line[i + 1])  # learn from my mistakes. if line[i+1] is replaced with word, then it will just be shit.
 			if potential_words:
 				self._sentence.append(choice(potential_words))  # I tried making this just output the next word, but apparently this is what works.
 		else:
