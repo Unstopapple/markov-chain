@@ -15,7 +15,7 @@ class MarkovChain:
         sentence = list()  # This is a nifty function in general. .split() is fucking great. I only use this once when the object is created, but yea.
         with open(self.file_name, 'r') as file:
             for line in file:
-                sentence.append((line.split()))
+                sentence.append((line.upper().split()))
         return sentence
 
     def __first_word(self):
